@@ -11,6 +11,6 @@
     },
     "transform": {
       "cmd": [ "python3", "/frames.py" ],
-      "image": "fowlertm/tf-demo_1.0:1.3"
+      "image": "fowlertm/tf-demo_1.0:1.4"
     }
   }

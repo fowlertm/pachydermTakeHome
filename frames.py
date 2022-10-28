@@ -49,7 +49,8 @@ def make_frames(path):
 
 # walk /pfs/images and call make_frames on every file found
 # To run locally, wrap this bit in the if __name__ == '__main__':
-for dirpath, dirs, files in os.walk("/pfs/video_tf-frames-demo/"):
+print("About to run the os.walk")
+for dirpath, dirs, files in os.walk("/pfs/video_tf-frames-demo"):
     print(dirpath, dirs, files)
     for file in files:
         file_path = os.path.join(dirpath, file)
