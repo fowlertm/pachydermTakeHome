@@ -1,0 +1,16 @@
+{
+    "pipeline": {
+      "name": "frames"
+    },
+    "description": "A pipeline that turns a video into frames with OpenCV.",
+    "input": {
+      "pfs": {
+        "glob": "/*",
+        "repo": "video_tf-frames-demo"
+      }
+    },
+    "transform": {
+      "cmd": [ "python3", "/frames.py" ],
+      "image": "fowlertm/tf-demo_1.0:1.0"
+    }
+  }
