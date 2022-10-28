@@ -43,13 +43,13 @@ def make_frames(path):
         which_video = root.split('/')[2]
         # print(which_video) # <- can be useful for debugging purposes
         
-        cv2.imwrite(f"{which_video}_frame_{count}.jpg", image)
+        cv2.imwrite(f"/pfs/out/{which_video}_frame_{count}.jpg", image)
 
         count += 1
 
 # walk /pfs/images and call make_frames on every file found
 # To run locally, wrap this bit in the if __name__ == '__main__':
-for dirpath, dirs, files in os.walk("pfs/videos"):
+for dirpath, dirs, files in os.walk("/pfs/video_tf-frames-demo/"):
     print(dirpath, dirs, files)
     for file in files:
         file_path = os.path.join(dirpath, file)
