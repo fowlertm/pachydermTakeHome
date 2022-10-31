@@ -39,8 +39,9 @@ def make_frames(path):
         if success == False: break
 
         # Saves the frames with frame-count
-        root, ext = os.path.splitext(path)
-        which_video = root.split('/')[2]
+        # root, ext = os.path.splitext(path)
+        # which_video = root.split('/')[2]
+        which_video = os.path.basename(path)
         # print(which_video) # <- can be useful for debugging purposes
         
         cv2.imwrite(f"/pfs/out/{which_video}_frame_{count}.jpg", image)
